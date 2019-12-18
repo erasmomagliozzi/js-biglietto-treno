@@ -18,8 +18,12 @@ console.log(prezzoBiglietto);
 // sconto
 // 20% under 18
 // 40% over 65
-if (eta < 18){
+if (eta <= 18){
   var calcoloScontoUnder = (((kmViaggio * 0.21) * 20) / 100 );
   var bigliettoUnder = prezzoBiglietto - calcoloScontoUnder;
   console.log(bigliettoUnder);
+}else if (eta >= 65){
+  var calcoloScontoOver = (((kmViaggio * 0.21) * 40) / 100 );
+  var bigliettoOver = prezzoBiglietto - calcoloScontoOver;
+  console.log(bigliettoOver);
 }
