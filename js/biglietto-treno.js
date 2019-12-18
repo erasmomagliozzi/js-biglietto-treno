@@ -11,7 +11,7 @@ console.log(kmViaggio);
 var eta = parseInt(prompt('Quanti anni hai?'));
 console.log(eta);
 
-// prezzo totale del viaggio
+// prezzo totale del viaggio per persone tra i 19 e 64 anni
 // 0.21€ al km
 var prezzoBiglietto = kmViaggio * 0.21;
 console.log(prezzoBiglietto);
@@ -19,11 +19,11 @@ console.log(prezzoBiglietto);
 // 20% under 18
 // 40% over 65
 if (eta <= 18){
-  var calcoloScontoUnder = (((kmViaggio * 0.21) * 20) / 100 );
+  var calcoloScontoUnder = ((prezzoBiglietto * 20) / 100 );
   var bigliettoUnder = prezzoBiglietto - calcoloScontoUnder;
   console.log(bigliettoUnder);
 }else if (eta >= 65){
-  var calcoloScontoOver = (((kmViaggio * 0.21) * 40) / 100 );
+  var calcoloScontoOver = ((prezzoBiglietto * 40) / 100 );
   var bigliettoOver = prezzoBiglietto - calcoloScontoOver;
   console.log(bigliettoOver);
 }
